@@ -96,14 +96,20 @@ int main()
     {
       rresult[i] = 2;
       cout<<"Ouch! There is at least one bad guy in the team. Task failed :(."<<endl;
+      if (i>=1 && rresult[i-1]==2){
+        cout<<"After two successful sabotage, one of the bad ministers reveal flaws."<<endl;
+        cout<<"You have a chance to trace down, please select （Yes or No）"<<endl;
+        string ans;
+        cin>>ans;
+        if (ans=="Yes"){
+          hints(arr);
+        }
+      }
     }
     delete [] currentcar;
     if (!game_continue(rresult))
       break;
-    if (i>=2 && !rresult[i] && !rresult[i-1]){
-      cout<<"After two successful sabotage, one of the bad ministers reveal flaws.";
-      hints(arr);
-    }
+
   }
  
   cout<<"Counting final results..."<<endl;
