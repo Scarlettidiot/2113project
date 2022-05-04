@@ -9,7 +9,7 @@ const int round = 5;
 const int rcarsize[5] = {3, 4, 4, 5, 5};
 
 
-bool round_result(int csize, int car[], int bad[])
+bool round_result(int csize, int car[], int bad[])//determine and return the result of one round game. Parameter: how many ministers be chosen, which ministers be chosen, bad ministers array
 {
   for (int i = 0; i < csize; i++)
   {
@@ -24,7 +24,7 @@ bool round_result(int csize, int car[], int bad[])
   return true;
 }
 
-void track_pf(int rresult[], int &pass, int &fail)
+void track_pf(int rresult[], int &pass, int &fail) //track the number of success and fail rounds to determine the final results.
 {
   for (int i = 0; i < round; i++)
   {
@@ -34,7 +34,7 @@ void track_pf(int rresult[], int &pass, int &fail)
       fail++;
   }
 }
-bool game_continue(int rresult[])
+bool game_continue(int rresult[]) //to determine whether we need to continue the game or the game has already had a result.
 {
   int pass = 0, fail = 0;
   track_pf(rresult, pass, fail);
@@ -44,7 +44,7 @@ bool game_continue(int rresult[])
     return true;
 }
 
-bool final_result(int rresult[])
+bool final_result(int rresult[]) //to return the final result. (true for win, false for fail)
 {
   int pass = 0, fail = 0;
   track_pf(rresult, pass, fail);
@@ -54,7 +54,8 @@ bool final_result(int rresult[])
     return false;
 }
 
-void hints(int arr[]){
+void hints(int arr[]) //to randomly provide one bad minister's number when the player encounters 2 consecutive fail.
+{ 
   srand((unsigned)time(NULL));
   int hint=rand()%4;
   cout<<"One of the bad guy is:"<<arr[hint]<<endl;
