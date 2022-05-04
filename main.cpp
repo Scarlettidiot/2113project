@@ -18,7 +18,7 @@ const int badcount = 4;
 const int round = 5;
 const int rcarsize[5] = {3, 4, 4, 5, 5}
 
-assign(int arr[]){
+void assign(int arr[]){
   srand((unsigned)time(NULL));
   for (int i=0;i<4;i++){
     arr[i]=rand()%10;//randomly select one number
@@ -32,7 +32,7 @@ assign(int arr[]){
 
 bool round_result(int csize, int car[], int bad[])
 {
-  for (int i = 0; i < csize, i++)
+  for (int i = 0; i < csize; i++)
   {
     for (int j = 0; j < badcount; j++)
     {
@@ -58,17 +58,17 @@ void track_pf(int rresult[], int &pass, int &fail)
 bool game_continue(int rresult[])
 {
   int pass = 0, fail = 0;
-  track_pf(rresult, pass, fail)
+  track_pf(rresult, pass, fail);
   if (pass == 3 || fail == 3)
     return false;
   else
-    return true
+    return true;
 }
 
 bool final_result(int rresult[])
 {
   int pass = 0, fail = 0;
-  track_pf(rresult, pass, fail)
+  track_pf(rresult, pass, fail);
   if (pass >= 3)
     return true;
   else
@@ -77,16 +77,16 @@ bool final_result(int rresult[])
 
 int main()
 {
-  cout<<"Welcome to Avalon. Please type down the option number to go forward."<<endl;
+  cout<<"Welcome to Avalon. "<<endl;
   int arr[badcount];
-  assign(arr[badcount]);
+  assign(arr);
   cout<<"Loading successful. Game starts."<<endl;
   int *rresult = new int [round];
   for (int i = 0; i< round; i++)
   {
     int n = rcarsize[i];
-    cout << "This is round " <<i<<"."<<endl;
-    cout << "Please select " <<n<< "ministers to complete the task."<<endl;
+    cout << "This is round " <<i+1<<"."<<endl;
+    cout << "Please select " <<n<< " ministers to complete the task."<<endl;
     int *currentcar = new int [n]; 
     for (int j = 0; j < n; j++)
     {
@@ -113,7 +113,7 @@ int main()
   }
   else if (!final_result(rresult))
   {
-    cout<<"Sorry, you lost :("
+    cout<<"Sorry, you lost :("<<endl;
   }
   
   delete [] rresult;
