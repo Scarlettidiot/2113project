@@ -1,3 +1,4 @@
+#include <Avalon.h>
 //round_result() decide whether the task is successful (whether player's selection contains number in arr[4].
   //inputs:
     //csize: the size of car that carries the ministers in the current round. 
