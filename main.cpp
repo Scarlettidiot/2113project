@@ -165,7 +165,9 @@ bool final_result(int rresult[])
 int main()
 {
   cout<<"Welcome to Avalon. Please type down the option number to go forward."<<endl;
-  
+  int arr[badcount];
+  assign(arr[badcount]);
+  cout<<"Loading successful. Game starts."<<endl;
   int *rresult = new int [round];
   for (int i = 0; i< round; i++)
   {
@@ -187,8 +189,22 @@ int main()
       rresult[i] = 2;
       cout<<"Ouch! There is at least one bad guy in the team. Task failed :(."<<endl;
     }
+    delete [] currentcar;
     if (!game_continue(rresult))
       break;
   }
+  cout<<"Counting final results..."<<endl;
+  if (final_result(rresult))
+  {
+    cout<<"You win! XD"<<endl;
+  }
+  else if (!final_result(rresult))
+  {
+    cout<<"Sorry, you lost :("
+  }
   
+  delete [] rresult;
+  
+
+  return 0;
 }
