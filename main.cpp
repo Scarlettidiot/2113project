@@ -3,12 +3,11 @@
 #include <string>
 using namespace std;
 
-void select_bad(int &arr[4]);//assign numbers to bad, good, player
-int player_num(int &arr[4]);
-select()//ask the player to choose numbers (a parameter to determine how many)
-round_result()//determine whether one round is success
+assign(int arr[]);//assign numbers to bad, good, player
+select()//as choose nuk the player nummbers (a parameter to determine how many)
+round_result()//determine the e whether one round is success
 game_continue()//determine whether to continue a game
-final_result()//determine the final result
+final_result()//determinfinal result
   
 int main(){
   cout<<"Welcome to Avalon!"<<endl;
@@ -16,7 +15,7 @@ int main(){
 
 
 
-void select_bad(int &arr[4]){
+assign(int arr[]){
   srand((unsigned)time(NULL));
   for (int i=0;i<4;i++){
     arr[i]=rand()%10;//randomly select one number
@@ -26,25 +25,5 @@ void select_bad(int &arr[4]){
       }
     }
   }
-}
+}//arr[4]contains 4 integer from 0 to 9 represents for bad ministers.
 
-int player_num(int &arr[4]){
-  srand((unsigned)time(NULL));
-  bool flag=1;
-  int playernum;
-  while (flag){
-    playernum=rand()%10;
-    bool flag2=0;
-    for (int i=0;i<4;i++){
-      if (arr[i]==playernum){
-        flag2=1;
-      }
-    }
-    if (flag2=0){
-      flag=0;
-    }
-  }
-}
-  
-  
-//arr[4]contains 4 integer from 0 to 9 represents for bad ministers.
