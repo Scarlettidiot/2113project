@@ -178,9 +178,15 @@ int main()
       cin >> currentcar[j];
     }
     if (round_result(n, currentcar, arr))
+    {
       rresult[i] = 1;
+      cout<<"Yay! This task is successful :)."<<endl;
+    }
     else if (round_result(n, currentcar, arr) == 0)
+    {
       rresult[i] = 2;
+      cout<<"Ouch! There is at least one bad guy in the team. Task failed :(."<<endl;
+    }
     if (!game_continue(rresult))
       break;
   }
