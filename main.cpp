@@ -1,7 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <string>
-#include "assign.h"
+#include "Avalon.h"
 using namespace std;
 
 const int badcount = 4; //contains the constant number of bad ministers.
