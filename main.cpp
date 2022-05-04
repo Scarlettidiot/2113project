@@ -4,9 +4,9 @@
 #include "assign.h"
 using namespace std;
 
-const int badcount = 4;
-const int round = 5;
-const int rcarsize[5] = {3, 4, 4, 5, 5};
+const int badcount = 4; //contains the constant number of bad ministers.
+const int round = 5; //the maximum round of the game.
+const int rcarsize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
 
 
 bool round_result(int csize, int car[], int bad[])//determine and return the result of one round game. Parameter: how many ministers be chosen, which ministers be chosen, bad ministers array
