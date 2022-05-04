@@ -3,17 +3,6 @@
 #include <string>
 using namespace std;
 
-assign(int arr[]);//assign numbers to bad, good, player
-select()//as choose nuk the player nummbers (a parameter to determine how many)
-round_result()//determine the e whether one round is success
-game_continue()//determine whether to continue a game
-final_result()//determinfinal result
-  
-#include <iostream>
-#include <time.h>
-#include <string>
-using namespace std;
-
 const int badcount = 4;
 const int round = 5;
 const int rcarsize[5] = {3, 4, 4, 5, 5}
@@ -75,6 +64,12 @@ bool final_result(int rresult[])
     return false;
 }
 
+void hints(int arr[]){
+  srand((unsigned)time(NULL));
+  int hint=rand()%4;
+  cout<<"One of the bad guy is:"<<arr[hint]<<endl;
+}
+
 int main()
 {
   cout<<"Welcome to Avalon. "<<endl;
@@ -105,7 +100,12 @@ int main()
     delete [] currentcar;
     if (!game_continue(rresult))
       break;
+    if (i>=2 && !rresult[i] && !rresult[i-1]{
+      cout<<"After two successful sabotage, one of the bad ministers reveal flaws."
+      hints(arr);
+    }
   }
+ 
   cout<<"Counting final results..."<<endl;
   if (final_result(rresult))
   {
