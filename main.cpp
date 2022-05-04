@@ -5,7 +5,7 @@ using namespace std;
 
 const int badcount = 4;
 const int round = 5;
-const int rcarsize[5] = {3, 4, 4, 5, 5}
+const int rcarsize[5] = {3, 4, 4, 5, 5};
 
 void assign(int arr[]){
   srand((unsigned)time(NULL));
@@ -100,8 +100,8 @@ int main()
     delete [] currentcar;
     if (!game_continue(rresult))
       break;
-    if (i>=2 && !rresult[i] && !rresult[i-1]{
-      cout<<"After two successful sabotage, one of the bad ministers reveal flaws."
+    if (i>=2 && !rresult[i] && !rresult[i-1]){
+      cout<<"After two successful sabotage, one of the bad ministers reveal flaws.";
       hints(arr);
     }
   }
