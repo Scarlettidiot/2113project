@@ -9,12 +9,6 @@ const int round = 5; //the maximum round of the game.
 const int rcarsize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
 
 
-void hints(int arr[]) //to randomly provide one bad minister's number when the player encounters 2 consecutive fail.
-{ 
-  srand((unsigned)time(NULL));
-  int hint=rand()%4;
-  cout<<"One of the bad guy is:"<<arr[hint]<<endl;
-}
 
 int main()
 {
