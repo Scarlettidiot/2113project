@@ -84,3 +84,13 @@ void assign(int arr[]){
     }
   }
 }
+
+//to randomly provide one bad minister's number when the player encounters 2 consecutive fail.
+//input: the array stores bad numbers.
+//output: one bad minister's number.
+void hints(int arr[]) 
+{ 
+  srand((unsigned)time(NULL));
+  int hint=rand()%4;
+  cout<<"One of the bad guy is:"<<arr[hint]<<endl;
+}
