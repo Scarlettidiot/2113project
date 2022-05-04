@@ -94,3 +94,14 @@ void hints(int arr[])
   int hint=rand()%4;
   cout<<"One of the bad guy is:"<<arr[hint]<<endl;
 }
+
+//when game fails, print out all the bad ministers.
+void print_result(int arr[])
+{
+  cout<<"The bad ministers are: ";
+  for (int i=0;i<4;i++)
+  {
+    cout<<arr[i]<<" ";
+  }
+  cout<<endl;
+}
