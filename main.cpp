@@ -14,6 +14,10 @@ final_result()//determinfinal result
 #include <string>
 using namespace std;
 
+const int badcount = 4;
+const int round = 5;
+const int rcarsize[5] = {3, 4, 4, 5, 5}
+
 int main(){
   cout<<"Welcome to Avalon!"<<endl;
   int arr[4];
@@ -156,4 +160,29 @@ bool final_result(int rresult[])
     return true;
   else
     return false;
+}
+
+int main()
+{
+  cout<<"Welcome to Avalon. Please type down the option number to go forward."<<endl;
+  
+  int *rresult = new int [round];
+  for (int i = 0; i< round; i++)
+  {
+    int n = rcarsize[i];
+    cout << "This is round " <<i<<"."<<endl;
+    cout << "Please select " <<n<< "ministers to complete the task."<<endl;
+    int *currentcar = new int [n]; 
+    for (int j = 0; j < n; j++)
+    {
+      cin >> currentcar[j];
+    }
+    if (round_result(n, currentcar, arr))
+      rresult[i] = 1;
+    else if (round_result(n, currentcar, arr) == 0)
+      rresult[i] = 2;
+    if (!game_continue(rresult))
+      break;
+  }
+  
 }
