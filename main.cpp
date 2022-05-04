@@ -113,3 +113,47 @@ assign(int arr[]){
   }
 }//arr[4]contains 4 integer from 0 to 9 represents for bad ministers.
 
+bool round_result(int csize, int car[], int bad[])
+{
+  for (int i = 0; i < csize, i++)
+  {
+    for (int j = 0; j < badcount; j++)
+    {
+      if (car[i] == bad[j])
+      {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+void track_pf(int rresult[], int &pass, int &fail)
+{
+  for (int i = 0; i < round; i++)
+  {
+    if (rresult[i] == 1)
+      pass++;
+    else if (rresult[i] == 2)
+      fail++;
+  }
+}
+bool game_continue(int rresult[])
+{
+  int pass = 0, fail = 0;
+  track_pf(rresult, pass, fail)
+  if (pass == 3 || fail == 3)
+    return false;
+  else
+    return true
+}
+
+bool final_result(int rresult[])
+{
+  int pass = 0, fail = 0;
+  track_pf(rresult, pass, fail)
+  if (pass >= 3)
+    return true;
+  else
+    return false;
+}
