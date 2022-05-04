@@ -27,6 +27,8 @@ int main()
   {
     int n = rcarsize[i];
     cout << "This is round " <<i+1<<"."<<endl;
+    cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
+    cout << "  0     1     2     3     4     5     6     7     8     9  " <<endl;
     cout << "Please select " <<n<< " ministers to complete the task."<<endl;
     int *currentcar = new int [n]; 
     for (int j = 0; j < n; j++)
