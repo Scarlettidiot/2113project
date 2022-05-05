@@ -10,4 +10,3 @@ Avalon.o: Avalon.cpp
 clean: 
 	rm *.o main
   
-.PHONY: clean
