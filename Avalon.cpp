@@ -96,7 +96,7 @@ void hints(int arr[])
 }
 
 //when game fails, print out all the bad ministers.
-void print_result(int arr[])
+void print_bad(int arr[])
 {
   cout<<"The bad ministers are: ";
   for (int i=0;i<4;i++)
