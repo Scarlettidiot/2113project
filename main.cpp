@@ -29,7 +29,7 @@ int main()
     //a variable storing the current group size of the round.
     int csize = GpSize[i];
     
-    print_lines();
+    print_lines(); //print lines to make screen outputs clear.
     
     //output which round is on the current status.
     cout << "This is round " <<i+1<<"."<<endl;
@@ -68,6 +68,8 @@ int main()
     //decide whether to continue the rounds.
     if (!game_continue(rresult))
       break;
+    
+    //decide whether to give hints.
     else if (give_hints(i,rresult))
     {
       hints(bad);
