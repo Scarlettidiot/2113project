@@ -13,5 +13,6 @@ void assign(int arr[]);
 void hints(int arr[]);
 void print_bad(int arr[]);
 bool give_hints(int i, int rresult[]);
+bool test_value(int currGroup[],int csize)
 
 #endif
