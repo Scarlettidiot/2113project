@@ -1,3 +1,6 @@
+void print_mstrs();
+void select_group(int currGroup[], int csize);
+void fill_rrslt(int rresult[]);
 int round_result(int csize, int car[], int bad[]);
 void track_pf(int rresult[], int &pass, int &fail);
 bool game_continue(int rresult[]);
