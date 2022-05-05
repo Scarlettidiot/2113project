@@ -45,16 +45,16 @@ int main()
     cout << "The ministers are on the mission..." << endl;
     
     //decide the round result.
-    if (round_result(n, currGroup, bad))
+    if (round_result(i, currGroup, bad))
     {
       rresult[i] = 2; //record the fail round as 2 in rresult[] to manage the game status.
-      cout<< "Ouch! The task was sabotaged. " << round_result(n, currGroup, bad) << " of the ministers did the thing."<<endl;
+      cout<< "Ouch! The task was sabotaged. " << round_result(i, currGroup, bad) << " of the ministers did the thing."<<endl;
       if (give_hints(i,rresult))
       {
         hints(bad);
       }
     }
-    else if (round_result(n, currGroup, bad) == 0)
+    else if (round_result(i, currGroup, bad) == 0)
     {
       rresult[i] = 1; //record the pass round as 1 in rresult[] to manage the game status.
       cout<<"Yay! This task is successful. Everyone in the team is loyal to the Kindom :)"<<endl;   
