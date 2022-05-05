@@ -1,0 +1,76 @@
+Welcome to Avalon. 
+
+Loading successful. Game starts.
+
+------------------------------------------------------------------
+
+This is round 1.
+
+(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)
+  0     1     2     3     4     5     6     7     8     9  
+
+Please select 3 ministers to complete the task.
+
+The ministers are on the mission...
+
+Yay! This task is successful. Everyone in the team is loyal to the Kindom :)
+
+------------------------------------------------------------------
+
+This is round 2.
+
+(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)
+  0     1     2     3     4     5     6     7     8     9  
+
+Please select 4 ministers to complete the task.
+
+The ministers are on the mission...
+
+Ouch! The task was sabotaged. 1 of the ministers did the thing.
+
+------------------------------------------------------------------
+
+This is round 3.
+
+(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)
+  0     1     2     3     4     5     6     7     8     9  
+
+Please select 4 ministers to complete the task.
+
+The ministers are on the mission...
+
+Yay! This task is successful. Everyone in the team is loyal to the Kindom :)
+
+------------------------------------------------------------------
+
+This is round 4.
+
+(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)
+  0     1     2     3     4     5     6     7     8     9  
+
+Please select 5 ministers to complete the task.
+
+The ministers are on the mission...
+
+Ouch! The task was sabotaged. 1 of the ministers did the thing.
+
+------------------------------------------------------------------
+
+This is round 5.
+
+(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)
+  0     1     2     3     4     5     6     7     8     9  
+
+Please select 5 ministers to complete the task.
+
+The ministers are on the mission...
+
+Yay! This task is successful. Everyone in the team is loyal to the Kindom :)
+
+------------------------------------------------------------------
+
+Counting final results...
+
+You win! XD
+The bad ministers are: 4 7 9 2 
+
