@@ -53,7 +53,7 @@ int round_result(int csize, int car[], int bad[])
   {
     for (int j = 0; j < badcount; j++)
     {
-      if (car[i] == car[j])
+      if (car[i] == bad[j])
       {
         badNum++;
       }
