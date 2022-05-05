@@ -5,3 +5,4 @@ bool final_result(int rresult[]);
 void assign(int arr[]);
 void hints(int arr[]);
 void print_bad(int arr[]);
+bool give_hints(int i, int rresult[]);
