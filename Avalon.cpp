@@ -8,6 +8,13 @@ const int badcount = 4; //contains the constant number of bad ministers.
 const int round = 5; //the maximum round of the game.
 const int GpSize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
 
+//print lines to separate screen output of each round.
+void print_lines()
+{
+  cout << endl;
+  cout << "------------------------------------------------------------------" << endl;
+  cout << endl;
+}
 
 //print the simple portraits of the ministers.
 void print_mstrs() 
