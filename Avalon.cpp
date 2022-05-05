@@ -105,3 +105,21 @@ void print_bad(int arr[])
   }
   cout<<endl;
 }
+
+//to determine whether to give hints or not.
+//if the player meet with two consecutive fail and choose to have hints, then it will return true.
+bool give_hints(int i, int rresult[])
+{
+  if (i>=1 && rresult[i]==2 && rresult[i-1]==2)
+  {
+    cout<<"After two successful sabotage, one of the bad ministers reveal flaws."<<endl;
+    cout<<"You have a chance to trace down, please select （Yes or No）"<<endl;
+    string ans;
+    cin>>ans;
+    if (ans=="Yes")
+    {
+      return true;
+    }
+  }
+  return false;
+}
