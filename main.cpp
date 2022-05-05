@@ -35,15 +35,15 @@ int main()
       {
         hints(bad);
       }
-      }
     }
     else if (round_result(n, currGroup, bad) == 0)
     {
       rresult[i] = 1; //record the pass round as 1 in rresult[] to manage the game status.
-      cout<<"Yay! This task is successful. Everyone in the team is loyal to the Kindom :)"<<endl;
-      
+      cout<<"Yay! This task is successful. Everyone in the team is loyal to the Kindom :)"<<endl;   
     }
-    delete [] currGroup; //release the memory of player's selected numbers after each round.
+    //release the memory of player's selected numbers after each round.
+    delete [] currGroup; 
+    //decide whether to continue the rounds.
     if (!game_continue(rresult))
       break;
 
