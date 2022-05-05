@@ -11,6 +11,7 @@ const int GpSize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in e
 int main()
 {
   cout<<"Welcome to Avalon. "<<endl;
+  cout<<endl;
   //assign random number to the bad ministers in the new game.
   int bad[badcount];
   assign(bad);
@@ -28,6 +29,8 @@ int main()
     //a variable storing the current group size of the round.
     int csize = GpSize[i];
     
+    print_lines();
+    
     //output which round is on the current status.
     cout << "This is round " <<i+1<<"."<<endl;
     
@@ -35,6 +38,7 @@ int main()
     print_mstrs();
     
     cout << "Please select " <<csize<< " ministers to complete the task."<<endl;
+    cout << endl;
     
     //a dynamic array storing the selected numbers for each round. Will be updated in every new round.
     int *currGroup = new int [csize]; 
@@ -43,6 +47,7 @@ int main()
     
     
     cout << "The ministers are on the mission..." << endl;
+    cout << endl;
     
     //decide the round result.
     if (round_result(csize, currGroup, bad))
@@ -70,7 +75,9 @@ int main()
   }
  
   //out of the loop for rounds. Game ended. Output the final results.
+  print_lines();
   cout<<"Counting final results..."<<endl;
+  cout<<endl;
   if (final_result(rresult))
   {
     cout<<"You win! XD"<<endl;
