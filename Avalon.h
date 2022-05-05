@@ -1,3 +1,6 @@
+#ifndef AVALON_H
+#define AVALON_H
+
 void print_mstrs();
 void select_group(int currGroup[], int csize);
 void fill_rrslt(int rresult[]);
@@ -9,3 +12,5 @@ void assign(int arr[]);
 void hints(int arr[]);
 void print_bad(int arr[]);
 bool give_hints(int i, int rresult[]);
+
+#endif
