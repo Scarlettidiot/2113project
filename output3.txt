@@ -1,3 +1,4 @@
+***Because the code includes random seed (time) , so the output everytime should be different***
 Welcome to Avalon. 
 
 Loading successful. Game starts.
