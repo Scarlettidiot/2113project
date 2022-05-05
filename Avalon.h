@@ -1,6 +1,7 @@
 #ifndef AVALON_H
 #define AVALON_H
 
+void print_lines();
 void print_mstrs();
 void select_group(int currGroup[], int csize);
 void fill_rrslt(int rresult[]);
