@@ -1,4 +1,34 @@
 #include "Avalon.h"
+
+void print_mstrs() 
+{
+  cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
+  cout << "  0     1     2     3     4     5     6     7     8     9  " <<endl;
+}
+
+//select_group() store players' inputs into the array currGroup[].
+  //inputs:
+    //currGroup[]: the group of ministers that the player selected to complete the task. 
+    //csize: the size of car that carries the ministers in the current round. 
+void select_group(int currGroup[], int csize)
+{
+  for (int i = 0; i < csize; i++)
+    {
+      cin >> currGroup[i];
+    }
+}
+
+//fill_rrslt() fill default number 0 to the array rresult[] to set the starting values.
+  //inputs:
+    //rresult[]: the array that records all past round's pass or fail results.
+void fill_rrslt(int rresult[])
+{
+  for (int i = 0; i < round, i++)
+  {
+    rresult[i] = 0;
+  }
+}
+
 //round_result() counts the number of bad ministers in player's selection by comparing them to bad[].
   //inputs:
     //csize: the size of car that carries the ministers in the current round. 
