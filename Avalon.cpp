@@ -46,14 +46,14 @@ void fill_rrslt(int rresult[])
     //bad: the arrays containing bad ministers' indexes.
   //output:
     //badNum: the number of bad ministers counted.
-int round_result(int csize, int car[], int bad[])
+int round_result(int csize, int gp[], int bad[])
 {
   int badNum = 0;
   for (int i = 0; i < csize; i++)
   {
     for (int j = 0; j < badcount; j++)
     {
-      if (car[i] == bad[j])
+      if (gp[i] == bad[j])
       {
         badNum++;
       }
