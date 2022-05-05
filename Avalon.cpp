@@ -24,7 +24,7 @@ void select_group(int currGroup[], int csize)
     //rresult[]: the array that records all past round's pass or fail results.
 void fill_rrslt(int rresult[])
 {
-  for (int i = 0; i < round, i++)
+  for (int i = 0; i < round; i++)
   {
     rresult[i] = 0;
   }
