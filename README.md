@@ -33,6 +33,7 @@ Game rules:
   - Feature: the dynamic array currentcar[] records the selection of current round (status).
   - Feature: the for loop in which the int i stores the number of the current round. 
   - Feature: game_continue() tracks the game status after every round and break the loop if the win and lose of the full game has been a certainty (i.e., break the loop if there has been three succeed rounds or 3 failed rounds even though the game haven't been to the final fifth round).
+  - Feature: hints(): a function judging if there are two rounds failed consecutively (track the game status). If yes, then the program will provide an opportunity. The player can choose whether to be given a bad minister's number randomly and automatically. 
 - Requirement 3: Dynamic memory management
   - Feature: rresult[] is a dynamic array which stores the game status. The memory location will be freed after the one full game ends.  
   - Feature: currentcar[] is a dynamic array which stores the selection of the player in each round. The memory will be freed after each round, and a new array will be created if there is new round after. 
@@ -41,5 +42,7 @@ Game rules:
   - Feature: round_result(): receive input in currentcar[] array and count the number of "bad ministers", which will be an output in the main function and also be used to decide and show the success or failure of the current round. 
   - Feature: final_result(): receive input in rresult[] array and count the pass and fail rounds, and output the success or failure by true or false. The main function structure will use the output to print out the result of the full game.
 - Requirement 5: Program codes in multiple files
-- There will be a function judging if there are two rounds failed consecutively. If yes, then the program will provide an opportunity. The player can choose whether to be given a good minister's number randomly and automatically. One function will be used to store the input of the player and one function will be used to address a random good minister's number.
-  This game will use a lot of defined functions and these functions will store in different files for supporting element 5.
+  - Feature: there will be three files in this program. 
+    - Avalon.h is the header file containing the function declarations (except for the main function in main function file).
+    - Avalon.cpp is the implementation file containin the function definitions (except for the main function in main function file).
+    - main.cpp is the main file which contains the main body of the codes. 
