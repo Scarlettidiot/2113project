@@ -17,18 +17,15 @@ int main()
   assign(bad);
   cout<<"Loading successful. Game starts."<<endl;
   int *rresult = new int [round];//a dynamic array for storing game status for each round 
+  fill_rrslt(rresult);
   for (int i = 0; i< round; i++)
   {
     int csize = GpSize[i];//variable storing the current group size of the round.
     cout << "This is round " <<i+1<<"."<<endl;
-    cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
-    cout << "  0     1     2     3     4     5     6     7     8     9  " <<endl;
+    print_mstrs();
     cout << "Please select " <<csize<< " ministers to complete the task."<<endl;
     int *currGroup = new int [csize]; //a dynamic array storing the selected numbers for each round. Will be updated in every new round.
-    for (int j = 0; j < csize; j++)
-    {
-      cin >> currGroup[j];
-    }
+    select_group(currGroup, csize); //read player's inputs and store them into the current group.
     cout << "The ministers are on the mission..." << endl;
     if (round_result(n, currGroup, bad))
     {
