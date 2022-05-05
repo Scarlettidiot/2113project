@@ -34,16 +34,10 @@ int main()
     {
       rresult[i] = 2; //record the fail round as 2 in rresult[] to manage the game status.
       cout<< "Ouch! The task was sabotaged. " << round_result(n, currGroup, bad) << " of the ministers did the thing."<<endl;
-      if (i>=1 && rresult[i-1]==2)
+      if (give_hints(i,rresult))
       {
-        cout<<"After two successful sabotage, one of the bad ministers reveal flaws."<<endl;
-        cout<<"You have a chance to trace down, please select （Yes or No）"<<endl;
-        string ans;
-        cin>>ans;
-        if (ans=="Yes")
-        {
-          hints(bad);
-        }
+        hints(bad);
+      }
       }
     }
     else if (round_result(n, currGroup, bad) == 0)
