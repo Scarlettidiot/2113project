@@ -25,17 +25,52 @@ void print_mstrs()
   cout << endl;
 }
 
+// to test if the input is valid.
+// if the input in one round has repeaded numbers or contains other numbers out of range, return false.
+//if the input is valid,return true.
+
+bool test_value(int currGroup[],int csize){
+  for(int i=0;i<csize;i++){
+    if (currGroup[i]>=0&&currGroup[i]<=9)
+    {
+      for (int k=0;k<i;k++){
+        if (currGroup[i]==currGroup[k]){
+          return false;
+        }
+      }
+    }
+    else{
+      return false;
+    }
+  }
+  return true;
+}
+
 //select_group() store players' inputs into the array currGroup[].
   //inputs:
-    //currGroup[]: the group of ministers that the player selected to complete the task. 
-    //csize: the size of car that carries the ministers in the current round. 
+    //currGroup[]: the group of ministers that the player selected to complete the task.
+    //csize: the size of car that carries the ministers in the current round.
 void select_group(int currGroup[], int csize)
 {
   for (int i = 0; i < csize; i++)
+  {
+    cin >> currGroup[i];
+  }
+  for (int i=0; i<csize;i++)
+  {
+    if (!test_value(currGroup,csize))
     {
-      cin >> currGroup[i];
+      cout<<"Input error! Please input again!"<<endl;
+      delete [] currGroup;
+      int *currGroup = new int [csize];
+      select_group(currGroup,csize);
     }
+    else{
+      return;
+    }
+  }
 }
+
 
 //fill_rrslt() fill default number 0 to the array rresult[] to set the starting values.
   //inputs:
