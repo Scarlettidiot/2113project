@@ -1,5 +1,6 @@
 #include "Avalon.h"
 
+//print the simple portraits of the ministers.
 void print_mstrs() 
 {
   cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
