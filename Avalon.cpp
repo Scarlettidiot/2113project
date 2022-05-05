@@ -1,25 +1,25 @@
 #include "Avalon.h"
-//round_result() decide whether the task is successful (whether player's selection contains number in arr[4].
+//round_result() counts the number of bad ministers in player's selection by comparing them to bad[].
   //inputs:
     //csize: the size of car that carries the ministers in the current round. 
     //car: the group of ministers that the player selected to complete the task.
     //bad: the arrays containing bad ministers' indexes.
   //output:
-    //true if there is no bad miniter in the group. 
-    //false if there is at least one minister in the group.
-bool round_result(int csize, int car[], int bad[])
+    //badNum: the number of bad ministers counted.
+int round_result(int csize, int car[], int bad[])
 {
+  int badNum = 0;
   for (int i = 0; i < csize; i++)
   {
     for (int j = 0; j < badcount; j++)
     {
       if (car[i] == car[j])
       {
-        return false;
+        badNum++;
       }
     }
   }
-  return true;
+  return badNum;
 }
 
 //track_pf() track the pass and fail in each round. Used in game_continue() and final_result().
