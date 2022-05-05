@@ -46,3 +46,19 @@ Game rules:
     - Avalon.h is the header file containing the function declarations (except for the main function in main function file).
     - Avalon.cpp is the implementation file containin the function definitions (except for the main function in main function file).
     - main.cpp is the main file which contains the main body of the codes. 
+
+- Compilation and execution instructions. *Our codes can be successfully compiled in Computer Science department's academy21 server. 
+  - method 1: 
+    - Launch a bash shell, go to the directory of containing the codes files. "cd [name of the directory]"
+    - type down:
+       (to compile the codes)
+       "g++ -c Avalon.cpp"
+       "g++ -c main.cpp"
+       "g++ Avalon.o main.o -o main" 
+       (to execute the program)
+       "./main" 
+  - method 2:
+    - Launch a bash shell, go to the directory of containing the codes files. "cd [name of the directory]"
+    - type down "make main" to compile the program.
+    - type down "./main" to execute.
+  - *Note: Our program receives inputs from command-line interface. Since the game content is randomly generated and the game react differently according to the immediate inputs in every round, input by txt files may not be applicable to our program.  
