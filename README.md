@@ -1,5 +1,5 @@
 # 2113project
--proposal
+
 #Identification of the team members.
 Group Number: 63
 Li Sijia (UID 3035771440)
@@ -16,10 +16,10 @@ Game rules:
 - The player will play the role of a good minister.
 - There are 10 "ministers" in total, 4 of them are bad. The good and bad ministers will be randomly assigned to identity number from 0 to 9.
 - There will be up to five rounds for the player to select ministers for joining the task.
-- For the first round, the player need to select three ministers; for the second and the third round, the player need to select four ministers; for the forth and the fifth round, the player need to select five ministers. (excluding player himself)
+- For the first round, the player need to select three ministers; for the second and the third round, the player need to select four ministers; for the forth and the fifth round, the player need to select five ministers. (excluding the player herself)
 - After each round, the player will immediately know the result of this round, and then judge the role of each number.
 - Player will win the game if three rounds are successful. If there are already three successful rounds, then the game will end automatically with the result winning.
-- No information about the ministers' identity will be given to the player during the game, unless the player failed the tasks succesively for two rounds. Then, one good minister's identity can be revealed to the player depend on player's demand.
+- No information about the ministers' identity will be given to the player during the game, unless the player failed the tasks succesively for two rounds. Then, one bad minister's identity can be revealed to the player depend on player's demand.
   (This rule is to avoid the player feels too difficult to accomplish the task. The player can choose not to be given if already know the roles)
 - The player need to reason the identity of the ministers by the success or failure of the tasks.
 - After the game, regardless of the result, the game will show the role of each number on the screen.
