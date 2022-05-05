@@ -6,7 +6,7 @@ main.o: main.cpp
 
 Avalon.o: Avalon.cpp
   g++ -c Avalon.cpp
-  
+
 clean:
   rm *.o main
   
