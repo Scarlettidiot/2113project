@@ -1,4 +1,13 @@
+#include <iostream>
+#include <time.h>
+#include <string>
 #include "Avalon.h"
+using namespace std;
+
+const int badcount = 4; //contains the constant number of bad ministers.
+const int round = 5; //the maximum round of the game.
+const int GpSize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
+
 
 //print the simple portraits of the ministers.
 void print_mstrs() 
