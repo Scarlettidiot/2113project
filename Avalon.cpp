@@ -56,21 +56,11 @@ void select_group(int currGroup[], int csize)
   {
     cin >> currGroup[i];
   }
-  for (int i=0; i<csize;i++)
+  if (!test_value(currGroup,csize))
   {
-    if (!test_value(currGroup,csize))
-    {
-      cout<<"Input error! Please input again!"<<endl;
-      delete [] currGroup;
-      int *currGroup = new int [csize];
-      select_group(currGroup,csize);
-    }
-    else{
-      return;
-    }
+    cout<<"Input error. Please start again."<<endl;
   }
 }
-
 
 //fill_rrslt() fill default number 0 to the array rresult[] to set the starting values.
   //inputs:
@@ -213,5 +203,6 @@ bool give_hints(int i, int rresult[])
       give_hints(i,rresult);
     }
   }
+  return false;
 }
 
