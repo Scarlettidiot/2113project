@@ -62,8 +62,9 @@ int main()
   else if (!final_result(rresult))
   {
     cout<<"Sorry, you lost :("<<endl;
-    print_result(arr)
   }
+  
+  print_result(arr);
   
   delete [] rresult;
   
