@@ -6,7 +6,7 @@ using namespace std;
 
 const int badcount = 4; //contains the constant number of bad ministers.
 const int round = 5; //the maximum round of the game.
-const int rcarsize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
+const int GpSize[5] = {3, 4, 4, 5, 5}; //the restricted number of ministers in each round.
 
 
 
@@ -19,21 +19,21 @@ int main()
   int *rresult = new int [round];//a dynamic array for storing game status for each round 
   for (int i = 0; i< round; i++)
   {
-    int csize = rcarsize[i];//variable storing the current group size of the round.
+    int csize = GpSize[i];//variable storing the current group size of the round.
     cout << "This is round " <<i+1<<"."<<endl;
     cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
     cout << "  0     1     2     3     4     5     6     7     8     9  " <<endl;
     cout << "Please select " <<csize<< " ministers to complete the task."<<endl;
-    int *currentcar = new int [csize]; //a dynamic array storing the selected numbers for each round. Will be updated in every new round.
+    int *currGroup = new int [csize]; //a dynamic array storing the selected numbers for each round. Will be updated in every new round.
     for (int j = 0; j < csize; j++)
     {
-      cin >> currentcar[j];
+      cin >> currGroup[j];
     }
     cout << "The ministers are on the mission..." << endl;
-    if (round_result(n, currentcar, bad))
+    if (round_result(n, currGroup, bad))
     {
       rresult[i] = 2; //record the fail round as 2 in rresult[] to manage the game status.
-      cout<< "Ouch! The task was sabotaged. " << round_result(n, currentcar, bad) << " of the ministers did the thing."<<endl;
+      cout<< "Ouch! The task was sabotaged. " << round_result(n, currGroup, bad) << " of the ministers did the thing."<<endl;
       if (i>=1 && rresult[i-1]==2)
       {
         cout<<"After two successful sabotage, one of the bad ministers reveal flaws."<<endl;
@@ -46,13 +46,13 @@ int main()
         }
       }
     }
-    else if (round_result(n, currentcar, bad) == 0)
+    else if (round_result(n, currGroup, bad) == 0)
     {
       rresult[i] = 1; //record the pass round as 1 in rresult[] to manage the game status.
       cout<<"Yay! This task is successful. Everyone in the team is loyal to the Kindom :)"<<endl;
       
     }
-    delete [] currentcar; //release the memory of player's selected numbers after each round.
+    delete [] currGroup; //release the memory of player's selected numbers after each round.
     if (!game_continue(rresult))
       break;
 
