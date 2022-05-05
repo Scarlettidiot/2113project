@@ -49,10 +49,7 @@ int main()
     {
       rresult[i] = 2; //record the fail round as 2 in rresult[] to manage the game status.
       cout<< "Ouch! The task was sabotaged. " << round_result(csize, currGroup, bad) << " of the ministers did the thing."<<endl;
-      if (give_hints(i,rresult))
-      {
-        hints(bad);
-      }
+
     }
     else if (round_result(csize, currGroup, bad) == 0)
     {
@@ -66,7 +63,10 @@ int main()
     //decide whether to continue the rounds.
     if (!game_continue(rresult))
       break;
-
+    else if (give_hints(i,rresult))
+    {
+      hints(bad);
+    }
   }
  
   //out of the loop for rounds. Game ended. Output the final results.
