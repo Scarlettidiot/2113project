@@ -204,6 +204,14 @@ bool give_hints(int i, int rresult[])
     {
       return true;
     }
+    else if (ans=="No")
+    {
+      return false;
+    }
+    else{
+      cout<<"invalid input. Please input again.";
+      give_hints(i,rresult);
+    }
   }
-  return false;
 }
+
