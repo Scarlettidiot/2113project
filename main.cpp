@@ -29,15 +29,11 @@ int main()
     {
       cin >> currentcar[j];
     }
+    cout << "The ministers are on the mission..." << endl;
     if (round_result(n, currentcar, bad))
     {
-      rresult[i] = 1;
-      cout<<"Yay! This task is successful :)."<<endl;
-    }
-    else if (round_result(n, currentcar, bad) == 0)
-    {
-      rresult[i] = 2;
-      cout<<"Ouch! There is at least one bad guy in the team. Task failed :(."<<endl;
+      rresult[i] = 2; //record the fail round as 2 in rresult[] to manage the game status.
+      cout<< "Ouch! The task was sabotaged. " << round_result(n, currentcar, bad) << " of the ministers did the thing."<<endl;
       if (i>=1 && rresult[i-1]==2)
       {
         cout<<"After two successful sabotage, one of the bad ministers reveal flaws."<<endl;
@@ -49,6 +45,12 @@ int main()
           hints(bad);
         }
       }
+    }
+    else if (round_result(n, currentcar, bad) == 0)
+    {
+      rresult[i] = 1; //record the pass round as 1 in rresult[] to manage the game status.
+      cout<<"Yay! This task is successful. Everyone in the team is loyal to the Kindom :)"<<endl;
+      
     }
     delete [] currentcar; //release the memory of player's selected numbers after each round.
     if (!game_continue(rresult))
