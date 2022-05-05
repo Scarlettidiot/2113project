@@ -19,8 +19,10 @@ void print_lines()
 //print the simple portraits of the ministers.
 void print_mstrs() 
 {
+  cout << endl;
   cout << "(!-!) (@-@) (#-#) ($-$) (^-^) (&-&) (*-*) (>-<) (Q-Q) (T-T)" <<endl;
   cout << "  0     1     2     3     4     5     6     7     8     9  " <<endl;
+  cout << endl;
 }
 
 //select_group() store players' inputs into the array currGroup[].
