@@ -50,15 +50,27 @@ bool test_value(int currGroup[],int csize){
   //inputs:
     //currGroup[]: the group of ministers that the player selected to complete the task.
     //csize: the size of car that carries the ministers in the current round.
+//the function will print error if the input is not valid and then the function will ask the player to input again.
 void select_group(int currGroup[], int csize)
 {
   for (int i = 0; i < csize; i++)
   {
-    cin >> currGroup[i];
+    char temp;
+    cin>>temp;
+    if (temp>='0'&&temp<='9'){
+      currGroup[i]=int(temp)-'0';
+    }
+    else{
+      cout<<"Input error, please input again."<<endl;
+      select_group(currGroup,csize);
+      return;
+    }
   }
   if (!test_value(currGroup,csize))
   {
-    cout<<"Input error. Please start again."<<endl;
+    cout<<"Input error. Please input again."<<endl;
+    select_group(currGroup,csize);
+    return;
   }
 }
 
