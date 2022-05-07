@@ -33,7 +33,7 @@ Game rules:
   - Feature: the dynamic array currentcar[] records the selection of current round (status).
   - Feature: the for loop in which the int i stores the number of the current round. 
   - Feature: game_continue() tracks the game status after every round and break the loop if the win and lose of the full game has been a certainty (i.e., break the loop if there has been three succeed rounds or 3 failed rounds even though the game haven't been to the final fifth round).
-  - Feature: hints(): a function judging if there are two rounds failed consecutively (track the game status). If yes, then the program will provide an opportunity. The player can choose whether to be given a bad minister's number randomly and automatically. 
+  - Feature: give_hints(): a function judging if there are two rounds failed consecutively (track the game status). If yes, then the program will provide an opportunity. The player can choose whether to be given a bad minister's number randomly and automatically. 
 - Requirement 3: Dynamic memory management
   - Feature: rresult[] is a dynamic array which stores the game status. The memory location will be freed after the one full game ends.  
   - Feature: currentcar[] is a dynamic array which stores the selection of the player in each round. The memory will be freed after each round, and a new array will be created if there is new round after. 
@@ -41,6 +41,7 @@ Game rules:
   - Feature: there is a for loop to ask the player input numbers which will be stored in the the dynamic array currentcat[] In each round. 
   - Feature: round_result(): receive input in currentcar[] array and count the number of "bad ministers", which will be an output in the main function and also be used to decide and show the success or failure of the current round. 
   - Feature: final_result(): receive input in rresult[] array and count the pass and fail rounds, and output the success or failure by true or false. The main function structure will use the output to print out the result of the full game.
+  - Feature: give_hints(), hints(): receive round selection, receive player's input (yes/no) and output hints depending on player's choice. 
 - Requirement 5: Program codes in multiple files
   - Feature: there will be three files in this program. 
     - Avalon.h is the header file containing the function declarations (except for the main function in main function file).
@@ -52,13 +53,13 @@ Game rules:
     - Launch a bash shell, go to the directory of containing the codes files. "cd [name of the directory]"
     - type down:
        (to compile the codes)
-       "g++ -c Avalon.cpp"
-       "g++ -c main.cpp"
-       "g++ Avalon.o main.o -o main" 
+       "g++ -c Avalon.cpp" (enter)
+       "g++ -c main.cpp" (enter)
+       "g++ Avalon.o main.o -o main" (enter) 
        (to execute the program)
-       "./main" 
+       "./main" (enter)
   - method 2:
     - Launch a bash shell, go to the directory of containing the codes files. "cd [name of the directory]"
-    - type down "make main" to compile the program.
-    - type down "./main" to execute.
+    - type down "make main" (enter) to compile the program. 
+    - type down "./main" (enter) to execute.
   - *Note: Our program receives inputs from command-line interface. Since the game content is randomly generated and the game react differently according to the immediate inputs in every round, input by txt files may not be applicable to our program.  
